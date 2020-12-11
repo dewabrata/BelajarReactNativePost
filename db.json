@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "nama": "dewa",
+      "alamat": "pakuan",
+      "telepon": "093232322"
+    },
+    {
+      "nama": "dsda",
+      "alamat": "asdsa",
+      "telepon": "sadas",
+      "id": 2
+    },
+    {
+      "{\"nama\":\"budi\",\"alamat\":\"jakarta\",\"telepon\":\"08777888823823\"}": "",
+      "id": 3
+    },
+    {
+      "{\"nama\":\"\",\"alamat\":\"\",\"telepon\":\"\"}": "",
+      "id": 4
+    },
+    {
+      "{\"nama\":\"budi\",\"alamat\":\"jakarta\",\"telepon\":\"0323223223\"}": "",
+      "id": 5
+    }
+  ]
+}
