@@ -1,17 +1,28 @@
 import React, { Component } from 'react';
 import {
+    SafeAreaView,
     StyleSheet,
     View,
     Text,
     TextInput,
-    Button
+    ScrollView,
+    StatusBar
 
 } from 'react-native';
 
+import {
+  
+    LearnMoreLinks,
+    Colors,
+    DebugInstructions,
+    ReloadInstructions,
+  } from 'react-native/Libraries/NewAppScreen';
 
 import config from '../../config';
 
 
+import { Wrapper, Header, Left, Right, Container, Space, H1, P, Btn, LabelIconInput } from '../utils';
+  
 
 
 class Inputdata extends Component {
@@ -73,6 +84,17 @@ class Inputdata extends Component {
     render() {
 
         return (
+           <>
+            <StatusBar barStyle="dark-content" />
+            <SafeAreaView>
+              <ScrollView
+                contentInsetAdjustmentBehavior="automatic"
+                style={styles.scrollView}>
+    
+    
+    
+                <View style={styles.body}>
+                  <View style={styles.sectionContainer}>
             <View>
                 <Text>Nama</Text>
                 <TextInput  style={styles.textinput} textBreakStrategy={'simple'} onChangeText={this.onChangeText("nama")} />
@@ -84,17 +106,23 @@ class Inputdata extends Component {
                 
                 <TextInput style={styles.textinput} textBreakStrategy={'simple'} onChangeText={this.onChangeText("telepon")} />
                 
-                <Button
+                <Btn
+                
+                    type="light"
                 
                     marginTop="10px"
                     
                     title="Send More"
                     color="#841584"
-
+                    label="Send"
                     onPress = {this.onPress}
                 />
             </View>
-
+            </View>
+            </View>
+          </ScrollView>
+        </SafeAreaView>
+        </>
         )
 
     }
@@ -103,21 +131,57 @@ class Inputdata extends Component {
 
 }
 
-
 const styles = StyleSheet.create({
-
-    textinput: {
-        height: 35,
-        padding: 0,
-        fontSize: 18,
-        color: config.defaultFontColor,
-        borderBottomWidth: 1,
-        fontWeight: 'bold',
-        borderBottomColor: '#c5c5c5',
-        fontFamily: config.defaultFont
-    },
+    scrollView: {
+    backgroundColor: Colors.lighter,
+},
+engine: {
+    position: 'absolute',
+right: 0,
+},
+body: {
+    backgroundColor: Colors.white,
+},
+sectionContainer: {
+    marginTop: 32,
+paddingHorizontal: 24,
+},
+sectionTitle: {
+    fontSize: 24,
+fontWeight: '600',
+color: Colors.black,
+},
+sectionDescription: {
+    marginTop: 8,
+fontSize: 18,
+fontWeight: '400',
+color: Colors.dark,
+},
+highlight: {
+    fontWeight: '700',
+},
+footer: {
+    color: Colors.dark,
+fontSize: 12,
+fontWeight: '600',
+padding: 4,
+paddingRight: 12,
+textAlign: 'right',
+},
+textinput: {
+    height: 35,
+    padding: 0,
+    fontSize: 18,
+    color: config.defaultFontColor,
+    borderBottomWidth: 1,
+    fontWeight: 'bold',
+    borderBottomColor: '#c5c5c5',
+    fontFamily: config.defaultFont
+},
 
 });
+
+
 
 
 
